@@ -11,7 +11,7 @@ import HomeIcon from '@material-ui/icons/Home';
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(1),
-    verticalAlign: 'bottom'
+    verticalAlign: 'bottom',
   },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => {
           color="inherit"
           noWrap
           className={classes.toolbarTitle}
-        >          
+        >
           <Link
             to="/"
             style={{
@@ -52,7 +52,7 @@ const Header = ({ siteTitle }) => {
               textDecoration: `none`,
             }}
           >
-          <HomeIcon className={classes.icon} fontSize="large" />
+            <HomeIcon className={classes.icon} fontSize="large" />
             {siteTitle}
           </Link>
         </Typography>
@@ -80,6 +80,14 @@ const Header = ({ siteTitle }) => {
             className={classes.link}
           >
             Album
+          </Link>
+          <Link
+            to="/pricing/"
+            variant="button"
+            color="textPrimary"
+            className={classes.link}
+          >
+            Pricing
           </Link>
         </nav>
         <Button
