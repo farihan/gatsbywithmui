@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const SecondPage = theme => {
+const SecondPage = () => {
   return (
     <Layout>
       <SEO title="Page two" />

@@ -6,8 +6,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles(theme => ({
+  icon: {
+    marginRight: theme.spacing(1),
+    verticalAlign: 'bottom'
+  },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     marginBottom: `1.45rem`,
@@ -39,7 +44,7 @@ const Header = ({ siteTitle }) => {
           color="inherit"
           noWrap
           className={classes.toolbarTitle}
-        >
+        >          
           <Link
             to="/"
             style={{
@@ -47,6 +52,7 @@ const Header = ({ siteTitle }) => {
               textDecoration: `none`,
             }}
           >
+          <HomeIcon className={classes.icon} fontSize="large" />
             {siteTitle}
           </Link>
         </Typography>
@@ -66,6 +72,14 @@ const Header = ({ siteTitle }) => {
             className={classes.link}
           >
             Page 3
+          </Link>
+          <Link
+            to="/album/"
+            variant="button"
+            color="textPrimary"
+            className={classes.link}
+          >
+            Album
           </Link>
         </nav>
         <Button

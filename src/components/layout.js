@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       <div className={classes.root}>
         <CssBaseline />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Container component="main" className={classes.main} maxWidth="xl">
+        <Container component="main" className={classes.main} maxWidth="md">
           <main>{children}</main>
         </Container>
         <footer className={classes.footer}>
